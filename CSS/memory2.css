@@ -1,30 +1,225 @@
 body {
     margin: 20px 0;
-    /* background: #6589F9; */
   }
-  
-  .grid {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  
-  .card {
-    margin: 5px;
-    /* background-color: #6589F9; */
-    background-size: cover ;
+#intro{
+    width: 1104px;
+    height: 780px;
+    background-image: url(../pics/intro.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    height: 200px;
-    width: 140px;
+    background-position: center ;
+}
+#start{
+    position: absolute;
+    bottom: 300px;
+    left: 150px;
+    width: 800px;
+    height: 100px;
+    font-size: 60px;
+}
+  #container{
+    display: none;
+    flex-direction: row;
   }
+  .table {
+    width: 800px;
+    margin: 0 auto;
+    display: inline;
+    justify-content: space-evenly;
+    position: absolute;
+    background-image: url(../pics/main.jpg)
+
+  }
+  #sidebar{
+    width: 300px;
+    height: 762px;
+    background-color: lightgray;
+    background-image: url(../pics/juiz.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center ;
+
+  }
+  #score{
+      width:100px;
+      height: 100px;
+      border: 3px solid yellow;
+      position: absolute;
+      left: 25px; 
+      top:200px;
+      font-size: 100px;
+      color: white;
+      background-color: black;
+      text-align: center;
+      font-family: "digital-7";
+  }
+  #score2{
+    width:100px;
+    height: 100px;
+    border: 3px solid yellow;
+    position: absolute;
+    left: 175px; 
+    top:200px;
+    font-size: 100px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-family: "digital-7";
+} 
+.win{
+    width: 1104px;
+    height: 780px;
+    background-color:none;
+    position:absolute;
+    top: 0px;
+}
+.message{
+    width: 600px;
+    height: 350px;
+    background-color:red;
+    position:absolute;
+    top: 190px;
+    left:252px;
+}
+  .card {
+    display: inline-block;
+    margin: 5px;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+.card,
+.back,
+.front {
+    border-radius: 50%;
+    height: 240px;
+    width: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front {
+    background: wheat url('../pics/logo.png') no-repeat center center / contain;  
+}  
+  .back {
+    transform: rotateY(180deg);
+  }  
   .pick {
-    border: 1px solid black;
+    transform: rotateY(180deg);
+
   }
   .match {
-    border: 4px solid red;
-    background-image: none !important;
+    background: grey url('../pics/v.png') no-repeat center center / contain;  
   }
+  @media screen and (max-width: 835px){
+    .card,
+    .back,
+    .front {
+        height: 120px;
+        width: 80px;
+      }
+      .table {
+        width: 295px;
+      }
+      #sidebar{
+        width: 111px;
+        height: 536px;
+
+      }
+      #score{
+        width:75px;
+        height: 75px;
+        left: 18.75px; 
+        top:150px;
+        font-size: 75px;
+
+    }
+    #score2{
+        width:75px;
+        height: 75px;
+        left: 18.75px; 
+        top:250px;
+        font-size: 75px;
+
+    }
+    .win{
+        width: 406px;
+        height: 536px;
+    }
+    .message{
+        width: 221px;
+        height: 129px;
+        top: 203px;
+        left:92.5px;
+    }
+    #start{
+        position: absolute;
+        left: 100px;
+        width: 350px;
+        height: 75px;
+        font-size:34px;
+}
+
+
+  }
+  @media screen and (min-width: 835px) and (max-width: 1100px) {
+    .card,
+    .back,
+    .front {
+        height: 180px;
+        width: 135px;
+
+      }
+      .table {
+        width: 600px;
+      }
+      #sidebar{
+        width: 225px;
+        height: 582px;
+      }
+      #score{
+        width:75px;
+        height: 75px;
+        left: 18.75px; 
+        top:150px;
+        font-size: 75px;
+
+    }
+    #score2{
+        width:75px;
+        height: 75px;
+        left: 131.25px; 
+        top:150px;
+        font-size: 75px;
+
+    }
+    .win{
+        width: 825px;
+        height: 582px;
+    }
+    .message{
+        width: 450px;
+        height: 261px;
+        top: 203px;
+        left:187.5px;
+    }
+    #start{
+        left: 150px;
+        width: 450px;
+        height: 75px;
+        font-size: 60px;
+
+    }
+  }  
+
+@font-face {
+    font-family: 'digital-7';
+    src: url('../font/digital-7.ttf');
+}
