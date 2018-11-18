@@ -97,7 +97,7 @@ function newGame() {
             }
             $("#score").text(points);
             $("#score2").text(wrong);
-            if (points == 3) {
+            if (points == 6) {
                 win = $("<div/>");
                 win.attr('class', 'win');
                 $("body").append(win);
